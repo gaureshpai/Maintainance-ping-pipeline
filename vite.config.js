@@ -83,4 +83,7 @@ const manifestForPlugin = {
 
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugin)],
+  server: {
+    port: 3001,  // Change this to your desired port
+  },
 });
