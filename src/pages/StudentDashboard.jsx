@@ -14,7 +14,7 @@ import SpinnerModal from "../components/SpinnerModal";
 import { auth } from "../utils/Firebase";
 import { isOfficial } from "../utils/FirebaseFunctions";
 
-const CitizenDashboard = () => {
+const StudentDashboard = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [SpinnerVisible, setSpinnerVisible] = useState(false);
   const navigate = useNavigate();
@@ -23,11 +23,11 @@ const CitizenDashboard = () => {
     setSpinnerVisible(true);
     auth.onAuthStateChanged((user) => {
       if (!user) {
-        navigate("/citizen-login");
+        navigate("/student-login");
       } else {
         isOfficial(user.uid).then((res) => {
           if (res) {
-            navigate("/official-dashboard");
+            navigate("/admin-dashboard");
           } else {
             setSpinnerVisible(false);
           }
@@ -35,7 +35,7 @@ const CitizenDashboard = () => {
       }
 
       if (params.get("newUser")) {
-        toast.success("Registration Succesful, Welcome to citizen dashboard", {
+        toast.success("Registration Succesful, Welcome to student dashboard", {
           icon: "👋",
         });
       }
@@ -120,4 +120,4 @@ const CitizenDashboard = () => {
   );
 };
 
-export default CitizenDashboard;
+export default StudentDashboard;

@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="ButtonGroup gap-8 hidden lg:flex">
             <Button
               component={Link}
-              to={Official ? "/official-dashboard" : "/citizen-dashboard"}
+              to={Official ? "/admin-dashboard" : "/student-dashboard"}
               variant="outlined"
             >
               Dashboard
@@ -89,7 +89,7 @@ const Navbar = () => {
           {User ? (
             <>
               <Link
-                to={Official ? "/official-dashboard" : "/citizen-dashboard"}
+                to={Official ? "/admin-dashboard" : "/student-dashboard"}
               >
                 Dashboard
               </Link>
