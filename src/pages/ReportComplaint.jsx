@@ -115,7 +115,7 @@ const ReportComplaint = () => {
         <DashboardLinkButton
           className={`${Media ? "hidden" : "block"} mx-[8vw]` }
           icon={faCamera}
-          name={"Upload a picture/video of incident"}
+          name={"Upload a picture/video of issue"}
           onClick={() => FileInput.current.click()}
           subtitle={"Make sure that everything is clear"}
         />
@@ -174,34 +174,34 @@ const ReportComplaint = () => {
             value={FormData.reason}
           >
             <FormControlLabel
-              value="Speeding/Racing"
+              value="Projector issues"
               control={<Radio />}
-              label="Speeding/Racing"
+              label="Projector issues"
             />
             <FormControlLabel
-              value="Overloading of Passengers"
+              value="Black board issues"
               control={<Radio />}
-              label="Overloading of Passengers"
+              label="Black board issues"
             />
             <FormControlLabel
-              value="Driving without seat belt/Helmet"
+              value="Fan and light issues"
               control={<Radio />}
-              label="Driving without seat belt/Helmet"
+              label="Fan and light issues"
             />
             <FormControlLabel
-              value="Illegal Overtaking"
+              value="Switch board issues"
               control={<Radio />}
-              label="Illegal Overtaking"
+              label="Switch board issues"
             />
             <FormControlLabel
-              value="Potholes in Roads"
+              value="Table bench and chairs"
               control={<Radio />}
-              label="Potholes in Roads"
+              label="Table bench and chairs"
             />
             <FormControlLabel
-              value="Pavement Defects"
+              value="Door and windows"
               control={<Radio />}
-              label="Pavement Defects"
+              label="Door and windows"
             />
             <FormControlLabel
               value="Others"
