@@ -11,9 +11,9 @@ const HomePage = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user && !isOfficial(user.uid)) {
-        navigate("/citizen-dashboard");
+        navigate("/student-dashboard");
       } else if (user && isOfficial(user.uid)) {
-        navigate("/official-dashboard");
+        navigate("/admin-dashboard");
       }
     });
   }, []);

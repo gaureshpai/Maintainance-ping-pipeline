@@ -4,32 +4,31 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { TextField } from "../components/RegisterAccount";
 import { auth } from "../utils/Firebase";
-import { handleLogin } from "../utils/FirebaseFunctions";
+import { handleLogin, isOfficial } from "../utils/FirebaseFunctions";
 import SpinnerModal from "../components/SpinnerModal";
 
-const CitizenLogin = () => {
+const AdminLogin = () => {
   const [FormData, setFormData] = useState({
     email: "",
     password: "",
   });
-  const [Spinner, setSpinner] = useState(false);
-  const [Err, setErr] = useState("");
   const navigate = useNavigate();
+  const [Err, setErr] = useState("");
+  const [Spinner, setSpinner] = useState(false);
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      if (user) {
-        return navigate("/citizen-dashboard");
+      if (user && isOfficial(user.uid)) {
+        return navigate("/admin-dashboard");
       }
     });
   }, []);
-
   return (
     <div className="h-screen overflow-hidden">
       <SpinnerModal visible={Spinner} />
       <Navbar />
       <div className=" lg:px-96 px-4 h-3/4 flex flex-col justify-center">
         <h2 className="mt-[25%] lg:mt-0 leading-normal font-bold text-center text-base lg:text-[2rem] my-8">
-          Citizen Login
+          Admin Login
         </h2>
         <div
           className="LoginBox flex flex-col gap-5 items-center 
@@ -39,17 +38,16 @@ const CitizenLogin = () => {
     "
         >
           <form
-            action=""
             onSubmit={(e) => {
               e.preventDefault();
               setSpinner(true);
               handleLogin(FormData)
                 .then(async (user) => {
-                  if (!user.official) {
-                    navigate("/citizen-dashboard");
+                  let officialOrNot = isOfficial(user.uid);
+                  if (officialOrNot) {
+                    navigate("/admin-dashboard");
                   } else {
-                    await auth.signOut();
-                    throw new Error("Invalid user");
+                    setErr("Invalid user");
                   }
                 })
                 .catch((err) => {
@@ -67,6 +65,7 @@ const CitizenLogin = () => {
               variant="outlined"
               label="E-mail"
               type="email"
+              value={FormData.email}
               onChange={(e) =>
                 setFormData({ ...FormData, email: e.target.value })
               }
@@ -76,6 +75,7 @@ const CitizenLogin = () => {
               variant="outlined"
               label="Password"
               type="password"
+              value={FormData.password}
               onChange={(e) =>
                 setFormData({ ...FormData, password: e.target.value })
               }
@@ -93,4 +93,4 @@ const CitizenLogin = () => {
   );
 };
 
-export default CitizenLogin;
+export default AdminLogin;

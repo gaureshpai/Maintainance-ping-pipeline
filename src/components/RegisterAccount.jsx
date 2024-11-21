@@ -50,7 +50,7 @@ const RegisterAccount = () => {
             .then((user) => {
               console.log(user);
 
-              navigate("/citizen-dashboard?newUser=true");
+              navigate("/student-dashboard?newUser=true");
             })
             .catch((err) => {
               setErr(err.message.split(": ")[1]);
