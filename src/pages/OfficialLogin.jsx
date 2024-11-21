@@ -28,7 +28,7 @@ const OfficialLogin = () => {
       <Navbar />
       <div className=" lg:px-96 px-4 h-3/4 flex flex-col justify-center">
         <h2 className="mt-[25%] lg:mt-0 leading-normal font-bold text-center text-base lg:text-[2rem] my-8">
-          Official Login
+          Admin Login
         </h2>
         <div
           className="LoginBox flex flex-col gap-5 items-center 

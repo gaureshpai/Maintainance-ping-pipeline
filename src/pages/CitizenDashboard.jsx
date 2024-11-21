@@ -84,7 +84,7 @@ const CitizenDashboard = () => {
         theme="light"
       />
       <h2 className=" lg:mt-10 leading-normal font-bold text-center text-xl lg:text-[2rem] my-8 lg:text-left lg:mx-20">
-        Dashboard
+        Student Dashboard
       </h2>
       <div className="grid lg:grid-cols-[0.8fr_0.6fr] mx-10">
         <div>
