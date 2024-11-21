@@ -18,7 +18,7 @@ const AdminLogin = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user && isOfficial(user.uid)) {
-        return navigate("/official-dashboard");
+        return navigate("/admin-dashboard");
       }
     });
   }, []);
@@ -45,7 +45,7 @@ const AdminLogin = () => {
                 .then(async (user) => {
                   let officialOrNot = isOfficial(user.uid);
                   if (officialOrNot) {
-                    navigate("/official-dashboard");
+                    navigate("/admin-dashboard");
                   } else {
                     setErr("Invalid user");
                   }
