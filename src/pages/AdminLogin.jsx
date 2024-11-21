@@ -7,7 +7,7 @@ import { auth } from "../utils/Firebase";
 import { handleLogin, isOfficial } from "../utils/FirebaseFunctions";
 import SpinnerModal from "../components/SpinnerModal";
 
-const OfficialLogin = () => {
+const AdminLogin = () => {
   const [FormData, setFormData] = useState({
     email: "",
     password: "",
@@ -93,4 +93,4 @@ const OfficialLogin = () => {
   );
 };
 
-export default OfficialLogin;
+export default AdminLogin;

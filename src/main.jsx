@@ -6,10 +6,10 @@ import Navbar from "./components/Navbar";
 import ReportedComplaints from "./components/ReportedComplaints";
 import "./index.css";
 import CitizenDashboard from "./pages/CitizenDashboard";
-import CitizenLogin from "./pages/CitizenLogin";
+import StudentLogin from "./pages/StudentLogin";
 import HomePage from "./pages/HomePage";
 import OfficialDashboard from "./pages/OfficialDashboard";
-import OfficialLogin from "./pages/OfficialLogin";
+import AdminLogin from "./pages/AdminLogin";
 import ReportComplaint from "./pages/ReportComplaint";
 
 const router = createBrowserRouter([
@@ -18,12 +18,12 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/citizen-login",
-    element: <CitizenLogin />,
+    path: "/student-login",
+    element: <StudentLogin />,
   },
   {
-    path: "/official-login",
-    element: <OfficialLogin />,
+    path: "/admin-login",
+    element: <AdminLogin />,
   },
   {
     path: "/citizen-dashboard",
