@@ -15,6 +15,7 @@ const CommentsTile = ({ comment }) => {
     minute: "numeric",
     hour12: true,
   });
+
   return (
     <React.Fragment key={comment.timestamp}>
       <div className="flex justify-between w-full">

@@ -11,6 +11,7 @@ const ComplaintsCard = ({ complaint }) => {
   let StatusColorEnum = Object.keys(Statuses).find(
     (key) => Statuses[key] === complaint.status
   );
+  
   return (
     <>
       <Dialog

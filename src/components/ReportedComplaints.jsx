@@ -26,6 +26,7 @@ const ReportedComplaints = () => {
   const handleComplaintsUpdate = (updatedComplaints) => {
     setComplaints(updatedComplaints);
   };
+
   return (
     <div className="lg:border lg:shadow-[3px_4px_4px_rgba(0,0,0,0.26)] rounded-lg lg:border-solid lg:border-black w-full flex flex-col items-center lg:h-[28rem] py-2">
       <h3 className="font-bold my-2">Complaints Reported by You</h3>

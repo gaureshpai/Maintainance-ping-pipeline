@@ -1,7 +1,9 @@
 import React from "react";
 import { RotateLoader } from "react-spinners";
 import spinnerBottomImage from '../assets/spinner-bottom.png'
+
 const SpinnerModal = ({ visible }) => {
+
   return (
     <div
       className={`bg-black bg-opacity-90 h-screen w-full fixed flex justify-center items-center z-20 flex-col ${

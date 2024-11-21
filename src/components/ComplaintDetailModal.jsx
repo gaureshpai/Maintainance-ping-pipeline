@@ -46,6 +46,7 @@ const ComplaintDetailModal = ({ setDialogOpen, complaint }) => {
     (key) => Statuses[key] === complaint.status
   );
   const [CommentFValue, setCommentFValue] = useState("");
+
   return (
     <div className="">
       <DialogTitle className="flex justify-between">

@@ -224,6 +224,7 @@ export const markAsSolved = async (complaintID) => {
     throw new Error(error.message);
   }
 };
+
 export const markAsRejected = async (complaintID) => {
   try {
     const complaint = doc(db, "complaints", complaintID);

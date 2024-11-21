@@ -98,7 +98,7 @@ const OfficialDashboard = () => {
   ];
   return (
     <>
-      <SpinnerModal visible={SpinnerVisible} />
+      {/* <SpinnerModal visible={SpinnerVisible} /> */}
       <Navbar />
       <div className="px-20 ">
         <h2 className=" lg:mt-10 leading-normal font-bold text-center text-xl lg:text-[2rem] my-8 lg:text-left">

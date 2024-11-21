@@ -5,6 +5,7 @@ import { auth } from "../utils/Firebase";
 import { isOfficial } from "../utils/FirebaseFunctions";
 import TrafficArt from "/src/assets/traffic-art.png";
 import Navbar from "/src/components/Navbar";
+
 const HomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -16,6 +17,7 @@ const HomePage = () => {
       }
     });
   }, []);
+  
   return (
     <div className="HomePage">
       <Navbar />

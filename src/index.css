@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
     margin: 0;
@@ -9,12 +11,7 @@
 
 }
 
-
 body {
     background: linear-gradient(90deg, #FFFEFF 0%, #D7FFFE 100%);
     /* background: #f5f5f5; */
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

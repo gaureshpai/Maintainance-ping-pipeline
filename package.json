@@ -1,5 +1,5 @@
 {
-  "name": "traffic-hero",
+  "name": "Maintainance Ping pipeline",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +20,8 @@
     "@mui/x-data-grid": "^7.22.2",
     "axios": "^1.7.7",
     "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
     "firebase": "^11.0.2",
     "geojson-places": "^1.0.8",
     "localforage": "^1.10.0",

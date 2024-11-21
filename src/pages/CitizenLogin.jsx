@@ -6,6 +6,7 @@ import { TextField } from "../components/RegisterAccount";
 import { auth } from "../utils/Firebase";
 import { handleLogin } from "../utils/FirebaseFunctions";
 import SpinnerModal from "../components/SpinnerModal";
+
 const CitizenLogin = () => {
   const [FormData, setFormData] = useState({
     email: "",
@@ -21,6 +22,7 @@ const CitizenLogin = () => {
       }
     });
   }, []);
+
   return (
     <div className="h-screen overflow-hidden">
       <SpinnerModal visible={Spinner} />

@@ -68,7 +68,7 @@ const CitizenDashboard = () => {
 
   return (
     <>
-      <SpinnerModal visible={SpinnerVisible} />
+      {/* <SpinnerModal visible={SpinnerVisible} /> */}
 
       <Navbar />
       <ToastContainer

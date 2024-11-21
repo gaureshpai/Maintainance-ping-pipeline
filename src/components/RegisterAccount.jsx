@@ -11,6 +11,7 @@ export const TextField = styled(MuiTextField)((props) => ({
     borderRadius: "15px",
   },
 }));
+
 const RegisterAccount = () => {
   const [FormData, setFormData] = useState({
     name: "",
@@ -28,6 +29,7 @@ const RegisterAccount = () => {
       setErr(null);
     }
   }, [FormData]);
+
   return (
     <div
       className="RegisterAccount flex flex-col gap-5 items-center 

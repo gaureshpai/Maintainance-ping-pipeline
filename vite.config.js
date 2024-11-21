@@ -2,9 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
-// https://vitejs.dev/config/
 const manifestForPlugin = {
-  registerType: "prompt",
+  registerType: "autoUpdate",
   includeAssets: [
     "logo.png",
     "logo.png",
@@ -18,9 +17,9 @@ const manifestForPlugin = {
     "maskable_icon.png",
   ],
   manifest: {
-    name: "MobilEASE - Mobile Efficient Assistance for Traffic",
-    short_name: "MobilEASE",
-    description: "Application to report traffic issues around you",
+    name: "Maintenance Ping Pipeline",
+    short_name: "Maintenance",
+    description: "Efficient application for reporting and tracking maintenance issues",
     icons: [
       {
         src: "/logo.png",
@@ -70,8 +69,8 @@ const manifestForPlugin = {
         purpose: "any maskable",
       },
     ],
-    theme_color: "#212121",
-    background_color: "#D7FFFE",
+    theme_color: "#005a9e",
+    background_color: "#f4f6f8",
     display: "standalone",
     scope: "/",
     start_url: "/",
@@ -81,6 +80,7 @@ const manifestForPlugin = {
     enabled: true,
   },
 };
+
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugin)],
 });
