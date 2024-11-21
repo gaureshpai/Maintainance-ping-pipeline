@@ -7,7 +7,7 @@ import { auth } from "../utils/Firebase";
 import { handleLogin, isOfficial } from "../utils/FirebaseFunctions";
 import SpinnerModal from "../components/SpinnerModal";
 
-const OfficialLogin = () => {
+const AdminLogin = () => {
   const [FormData, setFormData] = useState({
     email: "",
     password: "",
@@ -18,7 +18,7 @@ const OfficialLogin = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user && isOfficial(user.uid)) {
-        return navigate("/official-dashboard");
+        return navigate("/admin-dashboard");
       }
     });
   }, []);
@@ -45,7 +45,7 @@ const OfficialLogin = () => {
                 .then(async (user) => {
                   let officialOrNot = isOfficial(user.uid);
                   if (officialOrNot) {
-                    navigate("/official-dashboard");
+                    navigate("/admin-dashboard");
                   } else {
                     setErr("Invalid user");
                   }
@@ -93,4 +93,4 @@ const OfficialLogin = () => {
   );
 };
 
-export default OfficialLogin;
+export default AdminLogin;

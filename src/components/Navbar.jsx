@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="ButtonGroup gap-8 hidden lg:flex">
             <Button
               component={Link}
-              to={Official ? "/official-dashboard" : "/citizen-dashboard"}
+              to={Official ? "/admin-dashboard" : "/student-dashboard"}
               variant="outlined"
             >
               Dashboard
@@ -63,10 +63,10 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="ButtonGroup gap-8 hidden lg:flex">
-            <Button component={Link} to={"/official-login"} variant="outlined">
+            <Button component={Link} to={"/admin-login"} variant="outlined">
               Admin Login
             </Button>
-            <Button component={Link} to={"/citizen-login"} variant="outlined">
+            <Button component={Link} to={"/student-login"} variant="outlined">
               Student Login
             </Button>
           </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
           {User ? (
             <>
               <Link
-                to={Official ? "/official-dashboard" : "/citizen-dashboard"}
+                to={Official ? "/admin-dashboard" : "/student-dashboard"}
               >
                 Dashboard
               </Link>
@@ -97,8 +97,8 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link to={"/citizen-login"}>Student Login</Link>
-              <Link to={"/official-login"}>Admin Login</Link>
+              <Link to={"/student-login"}>Student Login</Link>
+              <Link to={"/admin-login"}>Admin Login</Link>
             </>
           )}
         </ul>

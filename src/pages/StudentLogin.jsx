@@ -7,7 +7,7 @@ import { auth } from "../utils/Firebase";
 import { handleLogin } from "../utils/FirebaseFunctions";
 import SpinnerModal from "../components/SpinnerModal";
 
-const CitizenLogin = () => {
+const StudentLogin = () => {
   const [FormData, setFormData] = useState({
     email: "",
     password: "",
@@ -18,7 +18,7 @@ const CitizenLogin = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        return navigate("/citizen-dashboard");
+        return navigate("/student-dashboard");
       }
     });
   }, []);
@@ -46,7 +46,7 @@ const CitizenLogin = () => {
               handleLogin(FormData)
                 .then(async (user) => {
                   if (!user.official) {
-                    navigate("/citizen-dashboard");
+                    navigate("/student-dashboard");
                   } else {
                     await auth.signOut();
                     throw new Error("Invalid user");
@@ -93,4 +93,4 @@ const CitizenLogin = () => {
   );
 };
 
-export default CitizenLogin;
+export default StudentLogin;

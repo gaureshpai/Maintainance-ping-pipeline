@@ -10,7 +10,7 @@ import { auth } from "../utils/Firebase";
 import { fetchComplaints, isOfficial } from "../utils/FirebaseFunctions";
 import { Statuses, statusColors } from "../utils/enums";
 
-const OfficialDashboard = () => {
+const AdminDashboard = () => {
   const [Complaints, setComplaints] = useState([]);
   const [ModalOpen, setModalOpen] = useState(false);
   const [complaint, setComplaint] = useState({});
@@ -20,11 +20,11 @@ const OfficialDashboard = () => {
     setSpinnerVisible(true);
     auth.onAuthStateChanged((user) => {
       if (!user) {
-        navigate("/official-login");
+        navigate("/admin-login");
       } else {
         isOfficial(user.uid).then((res) => {
           if (!res) {
-            navigate("/citizen-dashboard");
+            navigate("/student-dashboard");
           } else {
             setSpinnerVisible(false);
           }
@@ -156,4 +156,4 @@ const OfficialDashboard = () => {
   );
 };
 
-export default OfficialDashboard;
+export default AdminDashboard;

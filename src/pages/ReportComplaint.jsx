@@ -84,7 +84,7 @@ const ReportComplaint = () => {
             .then(() => {
               toast.success("Complaint Reported Succesfully");
               setTimeout(() => {
-                navigate("/citizen-dashboard");
+                navigate("/student-dashboard");
               }, 3000);
             })
             .finally(() => {
