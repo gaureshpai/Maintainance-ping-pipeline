@@ -10,7 +10,7 @@ const ReportedComplaints = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (!user || !isOfficial(user.uid)) {
-        return navigate("/citizen-login");
+        return navigate("/student-login");
       }
       const unsubscribe = fetchComplaintsByUser(
         user.uid,

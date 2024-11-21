@@ -6,12 +6,10 @@ const manifestForPlugin = {
   registerType: "autoUpdate",
   includeAssets: [
     "logo.png",
-    "logo.png",
-    "maskable_iconx48.png",
-    "maskable_iconx72.png",
-    "maskable_iconx96.png",
-    "maskable_iconx128.png",
+    "favicon-16x16.png",
+    "favicon-32x32.png",
     "maskable_iconx192.png",
+    "maskable_icon_x48.ico",
     "maskable_iconx384.png",
     "maskable_iconx512.png",
     "maskable_icon.png",
@@ -27,38 +25,24 @@ const manifestForPlugin = {
         type: "image/png",
       },
       {
-        src: "/maskable_icon_x48.png",
+        src: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        src: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        src: "/maskable_icon_x48.ico",
         sizes: "48x48",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/maskable_icon_x72.png",
-        sizes: "72x72",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/maskable_icon_x96.png",
-        sizes: "96x96",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/maskable_icon_x128.png",
-        sizes: "128x128",
         type: "image/png",
         purpose: "maskable",
       },
       {
         src: "/maskable_icon_x192.png",
         sizes: "192x192",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/maskable_icon_x384.png",
-        sizes: "384x384",
         type: "image/png",
         purpose: "maskable",
       },
@@ -83,7 +67,4 @@ const manifestForPlugin = {
 
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugin)],
-  server: {
-    port: 3001,  // Change this to your desired port
-  },
 });

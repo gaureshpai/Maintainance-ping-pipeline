@@ -5,10 +5,10 @@ import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
 import ReportedComplaints from "./components/ReportedComplaints";
 import "./index.css";
-import CitizenDashboard from "./pages/CitizenDashboard";
+import StudentDashboard from "./pages/StudentDashboard";
 import StudentLogin from "./pages/StudentLogin";
 import HomePage from "./pages/HomePage";
-import OfficialDashboard from "./pages/OfficialDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import ReportComplaint from "./pages/ReportComplaint";
 
@@ -26,12 +26,12 @@ const router = createBrowserRouter([
     element: <AdminLogin />,
   },
   {
-    path: "/citizen-dashboard",
-    element: <CitizenDashboard />,
+    path: "/student-dashboard",
+    element: <StudentDashboard />,
   },
   {
-    path: "/official-dashboard",
-    element: <OfficialDashboard />,
+    path: "/admin-dashboard",
+    element: <AdminDashboard />,
   },
   {
     path: "/report",

@@ -18,7 +18,7 @@ const StudentLogin = () => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        return navigate("/citizen-dashboard");
+        return navigate("/student-dashboard");
       }
     });
   }, []);
@@ -46,7 +46,7 @@ const StudentLogin = () => {
               handleLogin(FormData)
                 .then(async (user) => {
                   if (!user.official) {
-                    navigate("/citizen-dashboard");
+                    navigate("/student-dashboard");
                   } else {
                     await auth.signOut();
                     throw new Error("Invalid user");
