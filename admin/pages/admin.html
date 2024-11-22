@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="../pages/admin.html"><img src="../resource/home.png" alt="Home"></a>
+        <a href="../pages/viewcomplaint.html"><img src="../resource/eye.png" alt="View Complaint"></a>
+        <a href="../pages/resolvecomplaint.html"><img src="../resource/progress.jpeg" alt="Resolve Complaint"></a>
+        <a href="../pages/history.html"><img src="../resource/history.png" alt="History of Resolved Complaints"></a>
+      </div>
+      
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="breadcrumb">
+            <h2>Welcome Admin!</h2>
+          </div>
+        <div class="topbar-actions">
+          <input type="text" placeholder="Search...">
+          <!-- <button>Export</button>
+          <button>Add Product</button> -->
+        </div>
+      </div>
+
+      <!-- Product List -->
+      <div class="product-list">
+        <div class="product-header">
+          <h2>Recent Activities</h2>
+          <p>Manage your products and view their sales performance.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="active">All</button>
+          <button>Active</button>
+          <button>Draft</button>
+          <button>Archived</button>
+        </div>
+
+        <!-- Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Discrption</th>
+              <th>Room No.</th>
+              <th>Date of Regi.</th>
+              <th>Progress</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://via.placeholder.com/40" alt="Product" style="margin-right: 10px;"> Projecter issue</td>
+              <td class="actions">...</td>
+              <td>A318</td>
+              <td>19-11-2024</td>
+              <td>Completed</td>
+              <td><span class="status">Resolved</span></td>
+            </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/40" alt="Product" style="margin-right: 10px;"> Fan and Lights</td>
+                <td class="actions">...</td>
+                <td>B213</td>
+                <td>19-11-2024</td>
+                <td>In progress</td>
+                <td><span class="status">In progress</span></td>
+            </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/40" alt="Product" style="margin-right: 10px;"> Fan issue</td>
+                <td class="actions">...</td>
+                <td>B115</td>
+                <td>20-11-2024</td>
+                <td>In progress</td>
+                <td><span class="status">In progress</span></td>
+              </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/40" alt="Product" style="margin-right: 10px;"> Projecter Not Connectong</td>
+                <td class="actions">...</td>
+                <td>A117</td>
+                <td>21-11-2024</td>
+                <td>Pending</td>
+                <td><span class="status">New</span></td>
+            </tr>
+              <tr>
+                <td><img src="https://via.placeholder.com/40" alt="Product" style="margin-right: 10px;"> Tube Light</td>
+                <td class="actions">...</td>
+                <td>A317</td>
+                <td>18-11-2024</td>
+                <td>Completed</td>
+                <td><span class="status">Resolved</span></td>
+              </tr>
+              <tr>
+                <td><img src="https://via.placeholder.com/40" alt="Product" style="margin-right: 10px;"> Tubelight </td>
+                <td class="actions">...</td>
+                <td>A216</td>
+                <td>21-11-2024</td>
+                <td>Pending</td>
+                <td><span class="status">New</span></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
