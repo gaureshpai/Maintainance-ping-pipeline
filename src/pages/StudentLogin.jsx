@@ -4,31 +4,32 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { TextField } from "../components/RegisterAccount";
 import { auth } from "../utils/Firebase";
-import { handleLogin, isOfficial } from "../utils/FirebaseFunctions";
+import { handleLogin } from "../utils/FirebaseFunctions";
 import SpinnerModal from "../components/SpinnerModal";
 
-const OfficialLogin = () => {
+const StudentLogin = () => {
   const [FormData, setFormData] = useState({
     email: "",
     password: "",
   });
-  const navigate = useNavigate();
-  const [Err, setErr] = useState("");
   const [Spinner, setSpinner] = useState(false);
+  const [Err, setErr] = useState("");
+  const navigate = useNavigate();
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      if (user && isOfficial(user.uid)) {
-        return navigate("/official-dashboard");
+      if (user) {
+        return navigate("/student-dashboard");
       }
     });
   }, []);
+
   return (
     <div className="h-screen overflow-hidden">
       <SpinnerModal visible={Spinner} />
       <Navbar />
       <div className=" lg:px-96 px-4 h-3/4 flex flex-col justify-center">
         <h2 className="mt-[25%] lg:mt-0 leading-normal font-bold text-center text-base lg:text-[2rem] my-8">
-          Official Login
+          Student Login
         </h2>
         <div
           className="LoginBox flex flex-col gap-5 items-center 
@@ -38,16 +39,17 @@ const OfficialLogin = () => {
     "
         >
           <form
+            action=""
             onSubmit={(e) => {
               e.preventDefault();
               setSpinner(true);
               handleLogin(FormData)
                 .then(async (user) => {
-                  let officialOrNot = isOfficial(user.uid);
-                  if (officialOrNot) {
-                    navigate("/official-dashboard");
+                  if (!user.official) {
+                    navigate("/student-dashboard");
                   } else {
-                    setErr("Invalid user");
+                    await auth.signOut();
+                    throw new Error("Invalid user");
                   }
                 })
                 .catch((err) => {
@@ -65,7 +67,6 @@ const OfficialLogin = () => {
               variant="outlined"
               label="E-mail"
               type="email"
-              value={FormData.email}
               onChange={(e) =>
                 setFormData({ ...FormData, email: e.target.value })
               }
@@ -75,7 +76,6 @@ const OfficialLogin = () => {
               variant="outlined"
               label="Password"
               type="password"
-              value={FormData.password}
               onChange={(e) =>
                 setFormData({ ...FormData, password: e.target.value })
               }
@@ -93,4 +93,4 @@ const OfficialLogin = () => {
   );
 };
 
-export default OfficialLogin;
+export default StudentLogin;
