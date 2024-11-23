@@ -218,7 +218,7 @@ const ReportComplaint = () => {
               setFormData({ ...FormData, additionalInfo: e.target.value });
             }}
             rows={5}
-            placeholder="Provide more information about the incident"
+            placeholder="Provide more information about the issue"
           />
           <FormControlLabel
             required
