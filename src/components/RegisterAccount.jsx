@@ -41,7 +41,6 @@ const RegisterAccount = () => {
         Register a account to be a <b>RAISE AN ISSUE</b>
       </p>
       <form
-        action=""
         className=" flex flex-col gap-5 w-full"
         onSubmit={(e) => {
           e.preventDefault();
