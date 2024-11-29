@@ -12,10 +12,10 @@ function History() {
   <div className="container">
     {/* Sidebar */}
     <div className="sidebar">
-      <a href=""><img src="/public/resource/home.png" alt="Home" /></a>
-      <a href=""><img src="/public/resource/eye.png" alt="View Complaint" /></a>
-      <a href=""><img src="/public/resource/progress.jpeg" alt="Resolve Complaint" /></a>
-      <a href=""><img src="/public/resource/history.png" alt="History of Resolved Complaints" /></a>
+      <a href="/public/resource/home.png"><img src="/public/resource/home.png" alt="Home" /></a>
+      <a href="/public/resource/eye.png"><img src="/public/resource/eye.png" alt="View Complaint" /></a>
+      <a href="/public/resource/progress.jpeg"><img src="/public/resource/progress.jpeg" alt="Resolve Complaint" /></a>
+      <a href="/public/resource/history.png"><img src="/public/resource/history.png" alt="History of Resolved Complaints" /></a>
     </div>
     {/* Main Content */}
     <div className="main-content">

@@ -14,7 +14,7 @@ const SpinnerModal = ({ visible }) => {
       <p className="text-white font-extrabold mt-20 text-xl">Please Wait</p>
       <img
       className="absolute bottom-0 w-auto lg:h-40 h-20"
-      src={spinnerBottomImage} alt="" srcset="" />
+        src={spinnerBottomImage} alt="spinnerBottomImage" srcset="spinnerBottomImage" />
     </div>
   );
 };

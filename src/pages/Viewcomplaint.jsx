@@ -12,10 +12,10 @@ function Viewcomplaint() {
   <div className="container">
     {/* Sidebar */}
     <div className="sidebar">
-      <a href=""><img src="/public/assets2/resource/home.png" alt="Home" /></a>
-      <a href=""><img src="/public/assets2/resource/eye.png" alt="View Complaint" /></a>
-      <a href=""><img src="/public/assets2/resource/progress.jpeg" alt="Resolve Complaint" /></a>
-      <a href=""><img src="/public/assets2/resource/history.png" alt="History of Resolved Complaints" /></a>
+      <a href="/public/assets2/resource/home.png"><img src="/public/assets2/resource/home.png" alt="Home" /></a>
+      <a href="/public/assets2/resource/eye.png"><img src="/public/assets2/resource/eye.png" alt="View Complaint" /></a>
+      <a href="/public/assets2/resource/progress.jpeg"><img src="/public/assets2/resource/progress.jpeg" alt="Resolve Complaint" /></a>
+      <a href="/public/assets2/resource/history.png"><img src="/public/assets2/resource/history.png" alt="History of Resolved Complaints" /></a>
     </div>
     {/* Main Content */}
     <div className="main-content">

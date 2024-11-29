@@ -25,7 +25,7 @@ const HomePage = () => {
         <img
           className="TrafficArt hidden lg:block h-[32rem]"
           src={TrafficArt}
-          alt=""
+          alt="TrafficArt"
         />
         <div>
           <h3 className="slogan mt-[25%] lg:mt-0 leading-normal font-bold text-center text-base lg:text-[2rem]">
