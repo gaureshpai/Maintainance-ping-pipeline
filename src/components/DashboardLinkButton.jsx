@@ -13,7 +13,6 @@ const DashboardLinkButton = ({
   
   return (
     <Link
-      className=""
       to={link}
       onClick={() => {
         onClick ? onClick() : null;

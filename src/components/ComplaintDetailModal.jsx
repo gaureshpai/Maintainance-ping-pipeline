@@ -48,7 +48,7 @@ const ComplaintDetailModal = ({ setDialogOpen, complaint }) => {
   const [CommentFValue, setCommentFValue] = useState("");
 
   return (
-    <div className="">
+    <div>
       <DialogTitle className="flex justify-between">
         Complaint Details
         <DialogActions>
@@ -62,7 +62,7 @@ const ComplaintDetailModal = ({ setDialogOpen, complaint }) => {
         </DialogActions>
       </DialogTitle>
       <DialogContent>
-        <div className="">
+        <div>
           <div className="flex justify-between">
             <div className="flex gap-4 items-center">
               <FontAwesomeIcon icon={faMapMarkerAlt} />
