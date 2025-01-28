@@ -1,6 +1,6 @@
 import React from "react";
 import { RotateLoader } from "react-spinners";
-import spinnerBottomImage from '../assets/spinner-bottom.png'
+import spinnerBottomImage from '../assets/load.png'
 
 const SpinnerModal = ({ visible }) => {
 
