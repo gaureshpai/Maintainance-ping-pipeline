@@ -11,6 +11,9 @@ import HomePage from "./pages/HomePage";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import ReportComplaint from "./pages/ReportComplaint";
+import History from "./pages/History";
+import Resolvecomplaint from "./pages/Resolvecomplaint";
+import Admin from "./pages/Admin";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +48,18 @@ const router = createBrowserRouter([
         <ReportedComplaints />
       </>
     ),
+  },
+  {
+    path: "/adminHistory",//draft
+    element: <History />,
+  },
+  {
+    path: "/adminrescomplaint",
+    element: <Resolvecomplaint />,
+  },
+  {
+    path: "/Admin",
+    element: <Admin />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
