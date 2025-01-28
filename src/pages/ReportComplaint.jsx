@@ -126,7 +126,7 @@ const ReportComplaint = () => {
         >
           <img
             src={Media && FormData.mediaType === "image" ? MediaPath : null}
-            alt=""
+            alt="DashboardLinkButton"
             className={`max-w-full w-auto my-6 h-96 object-scale-down
           ${Media && FormData.mediaType == "image" ? "block" : "hidden"}
           `}
@@ -218,7 +218,7 @@ const ReportComplaint = () => {
               setFormData({ ...FormData, additionalInfo: e.target.value });
             }}
             rows={5}
-            placeholder="Provide more information about the incident"
+            placeholder="Provide more information about the issue"
           />
           <FormControlLabel
             required

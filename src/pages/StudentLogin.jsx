@@ -39,7 +39,6 @@ const StudentLogin = () => {
     "
         >
           <form
-            action=""
             onSubmit={(e) => {
               e.preventDefault();
               setSpinner(true);
