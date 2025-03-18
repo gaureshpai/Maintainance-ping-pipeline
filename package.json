@@ -35,8 +35,8 @@
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
+    "@types/react-dom": "^19.0.4",
     "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-basic-ssl": "^2.0.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
