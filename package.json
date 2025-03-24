@@ -18,7 +18,7 @@
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
     "@mui/x-data-grid": "^7.27.3",
-    "axios": "^1.8.1",
+    "axios": "^1.8.4",
     "clsx": "^2.1.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",
