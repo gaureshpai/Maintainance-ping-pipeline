@@ -22,7 +22,7 @@
     "clsx": "^2.1.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "firebase": "^11.4.0",
+    "firebase": "^11.5.0",
     "geojson-places": "^1.0.8",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
