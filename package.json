@@ -25,7 +25,7 @@
     "firebase": "^11.5.0",
     "geojson-places": "^1.0.8",
     "localforage": "^1.10.0",
-    "match-sorter": "^8.0.0",
+    "match-sorter": "^8.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.1.0",
     "react-images-uploading": "^3.1.7",
